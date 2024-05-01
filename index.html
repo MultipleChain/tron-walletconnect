@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { WalletConnectAdapter } from './src/index.ts'
+      
+      const wallet = new WalletConnectAdapter({
+        network: 'Nile',
+        options: {
+            relayUrl: 'wss://relay.walletconnect.com',
+            projectId: "113d9f5689edd84ff230c2a6d679c80c",
+        },
+        qrcodeModalOptions: { 
+            mobileLinks: [
+                "trust"
+            ],
+            desktopLinks: [
+                // 'zerion', 
+                // 'ledger'
+            ]
+        }
+    });
+
+    wallet.connect()
+    .then(async () => {
+        resolve(wallet);
+    })
+    .catch(error => {
+        reject(error);
+    });
+
+    </script>
+  </body>
+</html>
