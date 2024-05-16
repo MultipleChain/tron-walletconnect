@@ -27,7 +27,7 @@ const adapter = new WalletConnectAdapter({
     options: {
         relayUrl: 'wss://relay.walletconnect.com',
         // example walletconnect app project ID
-        projectId: 'e899c82be21d4acca2c8aec45e893598',
+        projectId: 'project id',
         metadata: {
             name: 'Example App',
             description: 'Example App',
