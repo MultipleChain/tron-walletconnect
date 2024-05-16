@@ -1,16 +1,16 @@
 {
   "name": "@multiplechain/tron-walletconnect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "module": "dist/index.es.js",
   "unpkg": "dist/index.umd.js",
   "browser": "dist/index.umd.js",
   "jsdelivr": "dist/index.umd.js",
   "exports": {
-      ".": {
-          "import": "./dist/index.es.js",
-          "types": "./dist/index.d.ts"
-      }
+    ".": {
+      "import": "./dist/index.es.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "scripts": {
     "dev": "vite",
@@ -31,6 +31,7 @@
     "@walletconnect/sign-client": "^2.12.2",
     "@walletconnect/types": "^2.12.2",
     "@walletconnect/utils": "^2.12.2",
-    "vite-plugin-dts": "^3.9.0"
+    "vite-plugin-dts": "^3.9.0",
+    "vite-plugin-node-polyfills": "^0.21.0"
   }
 }

@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineConfig({
     plugins: [
+        nodePolyfills(),
         dts({
             entryRoot: './src'
         })
