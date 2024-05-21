@@ -30,10 +30,10 @@
 
     wallet.connect()
     .then(async () => {
-        resolve(wallet);
+      console.log('Connected');
     })
     .catch(error => {
-        reject(error);
+      console.error(error);
     });
 
     </script>
